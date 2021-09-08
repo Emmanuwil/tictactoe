@@ -54,14 +54,17 @@ body {
 }
 
 .cell.x,
-.cell.circle {
+.cell.o {
     cursor: not-allowed;
+    font-size: 45px;
+}
+.cell.x{
+    content :  "X"
 }
 
-.board.x .cell:hover {
-
+.cell.o{
+    content : "O"
 }
-
 .cell.x::before,
 .cell.x::after
 .board.x .cell:hover:hover::before,
@@ -83,20 +86,20 @@ body {
     transform: rotate(-45deg);
 }
 
-.cell.circle::before,
-.cell.circle::after {
+.cell.o::before,
+.cell.o::after {
     content: '';
     position: absolute;
     border-radius: 50%;
 }
 
-.cell.circle::before {
+.cell.o::before {
     width: var(--mark-size);
     height: var(--mark-size);
     background-color: black;
 }
 
-.cell.circle::after {
+.cell.o::after {
     width: var(--mark-size);
     height: var(--mark-size);
     background-color: black;
